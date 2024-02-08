@@ -9,7 +9,7 @@
 // -----------------------------------------------------------------------------------------------------------//
 // This code is of **UWB ANCHOR Node**
 // We have not included configuration AT commands in code.
-// We've pre-configured UWB modules using manual method we discussed in video.
+// We've pre-configured UWB modules using manual method which we discussed in video.
 // *Asynchronous Code - In this code, we are not checking responses and Error codes of commands.
 // This is simple and minimal coding paradigm.
 // ===========================================================================================================//
@@ -165,7 +165,7 @@ void sendMsg(){
   Serial1.println(ANCHOR_SendMSG_cmd); 
 }
 
-//====================== Function for parsing the incomming data String ======================================//
+//====================== Function for parsing the incoming Srial data String =========================//
 String getValue(String data, char separator, int index)
 {
     int found = 0;
