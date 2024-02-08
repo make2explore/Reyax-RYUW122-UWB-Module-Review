@@ -19,7 +19,7 @@
 #include <Adafruit_GFX.h>        // Include core graphics library
 #include <Adafruit_SSD1306.h>    // Include Adafruit_SSD1306 library to drive the display
 
-// Set the SSD1306 OLED Display Resolutuin 128x64 
+// Define SSD1306 OLED Display Resolution 128x64 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 
@@ -95,6 +95,8 @@ static const uint8_t image_data_096OLEDscreens[1024] = {
 };
 
 // ANCHOR send command
+// AT+ANCHOR_SEND=<Address of TAG>,<Payload/data length>,<data in ASCII format>
+// AT+ANCHOR_SEND=9,4,TEST
 String ANCHOR_SendMSG_cmd = "AT+ANCHOR_SEND=9,4,TEST";
 
 // variables for timer
