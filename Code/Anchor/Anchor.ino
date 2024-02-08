@@ -106,8 +106,8 @@ unsigned long previousTime = 0;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(115200);
-  Serial1.begin(115200);
+  Serial.begin(115200);          // Serial is for getting logs of code execution
+  Serial1.begin(115200);         // Serial1 is connected to RYUW122 Module
 
   Serial.println("Starting....");
   Serial.println("");
