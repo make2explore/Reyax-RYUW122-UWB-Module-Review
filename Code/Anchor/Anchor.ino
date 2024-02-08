@@ -135,9 +135,11 @@ void setup() {
 
   // Clear the buffer.
   display.clearDisplay();
+
+  // Design Default Display Screen
   display.drawRect(0, 0, 126, 62, WHITE);
   display.drawLine(0, 20, 126, 20, WHITE);
-  //display.fillRect(0, 0, 126, 28, WHITE);
+  
   display.setCursor(28,3);
   display.setTextSize(2);
   display.setTextColor(WHITE);
@@ -151,12 +153,14 @@ void setup() {
   display.setCursor(98,36);
   display.setTextSize(2);
   display.print("cm");
-   
+  
+  // Display all above config at once
   display.display();
 }
 
 // Function for serially sending Anchor Send command
 void sendMsg(){
+  // Send AT+ANCHOR_SEND=9,4,TEST ..via serial port
   Serial.println(ANCHOR_SendMSG_cmd);
   Serial1.println(ANCHOR_SendMSG_cmd); 
 }
