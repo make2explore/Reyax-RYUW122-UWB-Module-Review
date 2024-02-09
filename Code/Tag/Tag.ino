@@ -97,12 +97,13 @@ static const uint8_t image_data_096OLEDscreens[1024] = {
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(115200);
-  Serial1.begin(115200);
+  Serial.begin(115200);          // Serial is for getting logs of code execution
+  Serial1.begin(115200);         // Serial1 is connected to RYUW122 Module
 
   Serial.println("Starting....");
   Serial.println("");
   
+  // initialize the display
   if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println(F("SSD1306 allocation failed"));
     for(;;);
@@ -125,6 +126,8 @@ void setup() {
 
   // Clear the buffer.
   display.clearDisplay();
+
+  // Design Default Display Screen
   display.drawRect(0, 0, 126, 62, WHITE);
   display.drawLine(0, 20, 126, 20, WHITE);
   //display.fillRect(0, 0, 126, 28, WHITE);
@@ -140,7 +143,8 @@ void setup() {
   display.setTextSize(2);
   display.setCursor(69,35);
   display.print("Node");
-   
+
+  // Display all above config at once
   display.display();
 }
 
@@ -150,7 +154,6 @@ void loop() {
   while (Serial1.available() > 0) {
     // Read the user input from the second serial port
     char userInput = Serial1.read();
-
     // Print the received character to the default serial port
     Serial.print(userInput);
   }
