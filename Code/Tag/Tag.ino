@@ -9,7 +9,7 @@
 // -----------------------------------------------------------------------------------------------------------//
 // This code is of **UWB Tag Node**
 // We have not included configuration AT commands in code.
-// We've pre-configured UWB modules using manual method we discussed in video.
+// We've pre-configured UWB modules using manual method which we discussed in video.
 // *Asynchronous Code - In this code, we are not checking responses and Error codes of commands.
 // This is simple and minimal coding paradigm.
 // ===========================================================================================================//
