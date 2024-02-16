@@ -116,6 +116,7 @@ void setup() {
   // Draw bitmap on the screen
   display.drawBitmap(0, 0, image_data_096OLEDscreens, 128, 64, 1);
   
+  // Display related settings - Font size, Text color etc.
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(20, 56);
